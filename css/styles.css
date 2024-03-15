@@ -4,6 +4,7 @@ body {
         color: #434455;
         background-color: #ffffff;
 }
+
 /* Стилі для обнулення відступів у елементів */
 h1,
 h2,
@@ -47,7 +48,7 @@ button {
 }
 
 .container {
-       
+
         margin: 0 auto;
         width: 1158px;
         padding-left: 15px;
@@ -97,16 +98,39 @@ button {
         display: inline-block;
 }
 
-.nav-button {
+.nav-list-link{
+        position: relative;
+}
+
+.navigation-button {
         padding: 24px 0;
         display: block;
+        transition-property: color, transition-duration, transition-timing-function;
 }
 
 .navigation-button:hover,
 .navigation-button:focus {
         color: #404bbf;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+
+.navigation-button:hover::after,
+.navigation-button:focus::after,
+.navigation-button:active::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: #404bbf;
+        border-radius: 2px;
+        width: 48px;
+        height: 4px;
+        bottom: 0;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
 .contact {
         font-style: normal;
         margin-left: auto;
@@ -119,11 +143,14 @@ button {
         letter-spacing: 0.02em;
         padding: 24px 0;
         display: block;
+        transition-property: color, transition-duration, transition-timing-function;
 }
 
 .contact-button:hover,
 .contact-button:focus {
         color: #404bbf;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -131,6 +158,13 @@ button {
         background-color: #2E2F42;
         color: #ffffff;
         padding: 188px 0;
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)) , 
+        url(../images/people-office.jpg);
+        
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
 }
 
 .hero-title {
@@ -145,6 +179,7 @@ button {
         margin-bottom: 48px;
 
 }
+
 .hero-button {
         font-family: "Roboto", sans-serif;
         font-weight: 500;
@@ -162,11 +197,14 @@ button {
         flex-direction: row;
         border-radius: 4px;
         margin: 0 auto;
+        transition-property: background-color, transition-duration, transition-timing-function;
 }
 
 .hero-button:hover,
 .hero-button:focus {
         background-color: #404BBF;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -195,8 +233,24 @@ button {
 
 .advantages-list-text {
         width: calc((100% - 3 * 24px) / 4);
-        }
+}
 
+.advantages-list-wrap{
+        border: 1px solid #8e8f99;
+        border-radius: 4px;
+        width: 264px;
+        height: 112px;
+        background: #f4f4fd;
+        margin-bottom: 8px;
+}
+.advantages-list-icon {
+        display: inline-block;
+        margin: 24px;
+        margin-bottom: 24px;
+        margin-left: 102px;
+        margin-right: 102px;
+        fill: none
+}
 .advantages-title {
         color: #2e2f42;
         font-weight: 500;
@@ -240,10 +294,40 @@ button {
         background-color: #ffffff;
         border-radius: 0 0 4px 4px;
         width: calc((100% - 72px) / 4);
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .name {
         padding: 32px 0;
+}
+
+.team-list-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 24px;
+}
+
+.team-list-wrap-link{
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;    
+        transition-property: background-color, transition-duration, transition-timing-function;
+}
+.team-list-wrap-link:hover,
+.team-list-wrap-link:focus {
+        background-color:#31d0aa;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-list-wrap-icon{
+       fill: none;
 }
 
 .third-team-title {
@@ -262,6 +346,7 @@ button {
         line-height: 1.5;
         letter-spacing: 0.02em;
         text-align: center;
+        margin-bottom: 8px;
 }
 
 .our-portfolio {
@@ -288,9 +373,21 @@ button {
 }
 
 .list-portfolio {
+        
         width: calc((100% - 48px) / 3);
-        }
-
+        transition-property: box-shadow, transition-duration, transition-timing-function;
+}
+.list-portfolio:hover{
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.list-portfolio:hover .third-portfolio-text-card{
+        
+        transform: translateY(0);
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .our-list {
         padding: 32px 16px;
         border: 1px solid #e7e9fc;
@@ -311,14 +408,32 @@ button {
         letter-spacing: 0.02em;
         color: #434455;
 }
-
+.portfolio-card-wrap{
+        position: relative;
+        overflow: hidden;
+}
+.third-portfolio-text-card {
+        position: absolute;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        color: #f4f4fd;
+        background-color: #4d5ae5;
+        top:0;
+        height: 100%;
+        padding-top: 40px;
+        padding-left: 32px;
+        padding-right: 32px;
+        transform: translateY(100%);
+        transition-property: transform, transition-duration, transition-timing-function;
+}
 .end-page {
         background-color: #2E2F42;
         padding: 100px 0;
 }
 
-.end-logo{
-       
+.end-logo {
+
         margin-bottom: 16px;
         font-family: "Raleway", sans-serif;
         font-weight: 700;
@@ -341,4 +456,16 @@ button {
         letter-spacing: 0.02em;
         color: #f4f4fd;
         max-width: 264px;
+}
+.footer-media{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px; 
+        letter-spacing: 0.02em;
+        color: #fff;
+        margin-bottom: 16px;
+}
+.footer-list-media{
+        display: flex;
+        gap:120px
 }
