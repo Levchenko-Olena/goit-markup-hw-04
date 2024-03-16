@@ -105,6 +105,9 @@ button {
         position: relative;
 }
 
+.but{
+        color: #404bbf;
+}
 .navigation-button {
         position: relative;
         padding: 24px 0;
@@ -119,8 +122,8 @@ button {
 }
 
 
-.navigation-button:hover::after,
-.navigation-button:focus::after,
+/*.navigation-button:hover::after,
+.navigation-button:focus::after,*/
 .navigation-button:active::after {
         content: '';
         width: 100%;
