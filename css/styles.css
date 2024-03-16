@@ -515,7 +515,7 @@ button {
         align-items: center;
         justify-content: center;
         flex-direction: row;
-        gap: 24px;
+        gap: 16px;
 }
 
 .footer-icon {}
