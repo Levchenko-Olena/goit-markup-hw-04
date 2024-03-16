@@ -499,5 +499,10 @@ button {
 }
 .footer-list-media{
         display: flex;
+        align-items: baseline;
         gap:120px
+}
+.wrap-futer-one{
+        margin-right: 120px
+        
 }
