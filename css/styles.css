@@ -60,6 +60,9 @@ button {
 }
 
 .full-navigation {
+        box-shadow:0px 2px 1px rgba(46, 47, 66, 0.08),
+                0px 1px 1px rgba(46, 47, 66, 0.16),
+                0px 1px 6px rgba(46, 47, 66, 0.08);
         border-bottom: 1px solid #e7e9fc;
 }
 
@@ -103,6 +106,7 @@ button {
 }
 
 .navigation-button {
+        position: relative;
         padding: 24px 0;
         display: block;
         transition-property: color, transition-duration, transition-timing-function;
@@ -111,15 +115,17 @@ button {
 .navigation-button:hover,
 .navigation-button:focus {
         color: #404bbf;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .navigation-button:hover::after,
 .navigation-button:focus::after,
 .navigation-button:active::after {
-        content: "";
+        content: '';
+        width: 100%;
+        left: 0;
+        bottom: -1px;
         position: absolute;
         display: block;
         background-color: #404bbf;
@@ -149,8 +155,7 @@ button {
 .contact-button:hover,
 .contact-button:focus {
         color: #404bbf;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -160,7 +165,7 @@ button {
         padding: 188px 0;
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)) , 
         url(../images/people-office.jpg);
-        
+        max-width: 1440px;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -203,8 +208,7 @@ button {
 .hero-button:hover,
 .hero-button:focus {
         background-color: #404BBF;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -236,6 +240,9 @@ button {
 }
 
 .advantages-list-wrap{
+        display: flex;
+        align-items: center;
+        justify-content: center;
         border: 1px solid #8e8f99;
         border-radius: 4px;
         width: 264px;
